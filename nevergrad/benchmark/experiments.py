@@ -656,7 +656,11 @@ def yabbob(
         optims += get_optimizers("splitters", seed=next(seedg))  # type: ignore
 
     if hd and small:
-        optims = ["BO", "BOSplit", "CMA", "PSO", "DE"]
+        # optims = ["BO", "BOSplit", "CMA", "PSO", "DE"]
+        # optims = ["BO", "BOSplit1", "BOSplit5", "BOSplit10", "BOSplit15", "BOSplit20", "BOSplit40", "CMA", "PSO", "DE"]
+        # optims = ["BO", "BOSplit1", "BOSplit5", "BOSplit10", "BOSplit15", "BOSplit20", "BOSplit40", "CMA", "PSO", "DE", "MetaModel", "MetaTuneRecentering", "RandomSearch", "QORandomSearch","OnePlusOne","NGOpt","AX","BOBYQA"]
+        # optims = ["AXSplit1", "AXSplit5", "AXSplit10", "AXSplit15", "AXSplit20", "AXSplit40", "BOBYQASplit1", "BOBYQASplit5", "BOBYQASplit10", "BOBYQASplit15", "BOBYQASplit20", "BOBYQASplit40"]
+        optims = ["BOBYQASplit1"]
     # List of objective functions.
     functions = [
         ArtificialFunction(name, block_dimension=d, rotation=rotation, noise_level=noise_level, split=split)

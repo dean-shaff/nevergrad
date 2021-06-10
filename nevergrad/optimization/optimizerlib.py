@@ -1916,9 +1916,83 @@ class ParametrizedBO(base.ConfiguredOptimizer):
 
 
 BO = ParametrizedBO().set_name("BO", register=True)
-BOSplit = ConfSplitOptimizer(max_num_vars=15, progressive=False, multivariate_optimizer=BO).set_name(
-    "BOSplit", register=True
+BOSplit1 = ConfSplitOptimizer(max_num_vars=1, progressive=False, multivariate_optimizer=BO).set_name(
+    "BOSplit1", register=True
 )
+
+BOSplit5 = ConfSplitOptimizer(max_num_vars=5, progressive=False, multivariate_optimizer=BO).set_name(
+    "BOSplit5", register=True
+)
+
+BOSplit10 = ConfSplitOptimizer(max_num_vars=10, progressive=False, multivariate_optimizer=BO).set_name(
+    "BOSplit10", register=True
+)
+
+BOSplit15 = ConfSplitOptimizer(max_num_vars=15, progressive=False, multivariate_optimizer=BO).set_name(
+    "BOSplit15", register=True
+)
+
+BOSplit20 = ConfSplitOptimizer(max_num_vars=20, progressive=False, multivariate_optimizer=BO).set_name(
+    "BOSplit20", register=True
+)
+
+BOSplit40 = ConfSplitOptimizer(max_num_vars=40, progressive=False, multivariate_optimizer=BO).set_name(
+    "BOSplit40", register=True
+)
+
+
+# Collaborative coevolution for AX and BOBYQA
+
+AXSplit1 = ConfSplitOptimizer(max_num_vars=1, progressive=False, multivariate_optimizer=AX).set_name(
+    "AXSplit1", register=True
+)
+
+AXSplit5 = ConfSplitOptimizer(max_num_vars=5, progressive=False, multivariate_optimizer=AX).set_name(
+    "AXSplit5", register=True
+)
+
+AXSplit10 = ConfSplitOptimizer(max_num_vars=10, progressive=False, multivariate_optimizer=AX).set_name(
+    "AXSplit10", register=True
+)
+
+AXSplit15 = ConfSplitOptimizer(max_num_vars=15, progressive=False, multivariate_optimizer=AX).set_name(
+    "AXSplit15", register=True
+)
+
+AXSplit20 = ConfSplitOptimizer(max_num_vars=20, progressive=False, multivariate_optimizer=AX).set_name(
+    "AXSplit20", register=True
+)
+
+AXSplit40 = ConfSplitOptimizer(max_num_vars=40, progressive=False, multivariate_optimizer=AX).set_name(
+    "AXSplit40", register=True
+)
+
+###
+
+BOBYQASplit1 = ConfSplitOptimizer(max_num_vars=1, progressive=False, multivariate_optimizer=BOBYQA).set_name(
+    "BOBYQASplit1", register=True
+)
+
+BOBYQASplit5 = ConfSplitOptimizer(max_num_vars=5, progressive=False, multivariate_optimizer=BOBYQA).set_name(
+    "BOBYQASplit5", register=True
+)
+
+BOBYQASplit10 = ConfSplitOptimizer(max_num_vars=10, progressive=False, multivariate_optimizer=BOBYQA).set_name(
+    "BOBYQASplit10", register=True
+)
+
+BOBYQASplit15 = ConfSplitOptimizer(max_num_vars=15, progressive=False, multivariate_optimizer=BOBYQA).set_name(
+    "BOBYQASplit15", register=True
+)
+
+BOBYQASplit20 = ConfSplitOptimizer(max_num_vars=20, progressive=False, multivariate_optimizer=BOBYQA).set_name(
+    "BOBYQASplit20", register=True
+)
+
+BOBYQASplit40 = ConfSplitOptimizer(max_num_vars=40, progressive=False, multivariate_optimizer=BOBYQA).set_name(
+    "BOBYQASplit40", register=True
+)
+
 
 
 class _Chain(base.Optimizer):
